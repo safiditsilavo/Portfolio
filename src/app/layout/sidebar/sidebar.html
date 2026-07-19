@@ -24,7 +24,7 @@
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="item.icon" />
                     </svg>
-                    <span class="font-mono">{{ item.label }}</span>
+                    <span class="font-mono">{{ item.labelKey | transloco }}</span>
             </a>
         }
     </nav>

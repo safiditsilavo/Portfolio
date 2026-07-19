@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "about": "À propos",
+    "skills": "Technologies",
+    "projects": "Contributions",
+    "contact": "Contact"
+  },
+  "home": {
+    "badge": "OUVERT AUX OPPORTUNITÉS & COLLABORATIONS",
+    "title1": "Architecte Backend",
+    "title2": "Explorateur Frontend",
+    "intro": "Je construis des architectures serveur robustes tout en cultivant l'art du design sur le frontend moderne. Un pont entre la rigueur fonctionnelle et des interfaces expressives et intuitives.",
+    "cards": {
+      "backend": { "title": "Moteurs Backend", "desc": "Expertise en NestJS, endpoints Python haute performance, et pipelines PHP résilients." },
+      "frontend": { "title": "UIs Modernes", "desc": "Conception itérative d'applications précises grâce aux Signals Angular et à l'écosystème React hooks." },
+      "data": { "title": "Infrastructure de données", "desc": "Optimisation de recherche via Elasticsearch, orchestration de schémas PostgreSQL, cache temps réel via Redis." }
+    }
+  }
+}

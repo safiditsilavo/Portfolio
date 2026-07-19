@@ -1,0 +1,20 @@
+{
+  "nav": {
+    "dashboard": "Dashboard",
+    "about": "About Me",
+    "skills": "Tech Stack",
+    "projects": "Contributions",
+    "contact": "Contact"
+  },
+  "home": {
+    "badge": "OPEN TO OPPORTUNITIES & COLLABORATIONS",
+    "title1": "Backend Architect",
+    "title2": "Frontend Explorer",
+    "intro": "Building highly resilient server-side architectures while pursuing design craft on the modern frontend. Bridging pure functional robustness with expressive, intuitive user interfaces.",
+    "cards": {
+      "backend": { "title": "Backend Engines", "desc": "Expert design in NestJS, high performance Python endpoints, and classic resilient PHP pipelines." },
+      "frontend": { "title": "Modern UIs", "desc": "Iteratively shaping pixel-perfect applications leveraging Angular Signals and the React hooks ecosystem." },
+      "data": { "title": "Data Infrastructure", "desc": "Search tuning via Elasticsearch, schema orchestration in PostgreSQL, and real-time caching via Redis." }
+    }
+  }
+}
