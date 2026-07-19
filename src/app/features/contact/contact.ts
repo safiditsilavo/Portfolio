@@ -17,6 +17,7 @@ export class Contact {
   isSending = signal(false);
   sendProgress = signal(0);
   sendSuccess = signal(false);
+  sendError = signal<string | null>(null);
 
   async onSubmit(event: Event) {
     event.preventDefault();
@@ -24,18 +25,23 @@ export class Contact {
 
     this.isSending.set(true);
     this.sendProgress.set(0);
+    this.sendError.set(null);
 
-    await this.contactService.send(
-      { name: this.formName(), email: this.formEmail(), message: this.formMessage() },
-      (percent) => this.sendProgress.set(percent),
-    );
+    try {
+      await this.contactService.send(
+        { name: this.formName(), email: this.formEmail(), message: this.formMessage() },
+        (percent) => this.sendProgress.set(percent),
+      );
 
-    this.isSending.set(false);
-    this.sendSuccess.set(true);
-    this.formName.set('');
-    this.formEmail.set('');
-    this.formMessage.set('');
-
-    setTimeout(() => this.sendSuccess.set(false), 5000);
+      this.sendSuccess.set(true);
+      this.formName.set('');
+      this.formEmail.set('');
+      this.formMessage.set('');
+      setTimeout(() => this.sendSuccess.set(false), 5000);
+    } catch {
+      this.sendError.set('La transmission a échoué. Réessaie dans un instant.');
+    } finally {
+      this.isSending.set(false);
+    }
   }
 }

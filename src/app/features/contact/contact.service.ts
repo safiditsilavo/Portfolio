@@ -8,22 +8,30 @@ export interface ContactPayload {
 
 @Injectable({ providedIn: 'root' })
 export class ContactService {
-  /**
-   * Simule l'envoi d'un message. Le jour où tu branches un vrai service
-   * (EmailJS, Formspree, ta propre API...), seul CE fichier change —
-   * le composant Contact n'a rien à savoir de "comment" c'est envoyé.
-   */
-  send(payload: ContactPayload, onProgress: (percent: number) => void): Promise<void> {
-    return new Promise((resolve) => {
-      let progress = 0;
-      const interval = setInterval(() => {
-        progress += 10;
-        onProgress(progress);
-        if (progress >= 100) {
-          clearInterval(interval);
-          resolve();
-        }
-      }, 120);
-    });
+  async send(payload: ContactPayload, onProgress: (percent: number) => void): Promise<void> {
+    let fakeProgress = 0;
+    const tick = setInterval(() => {
+      fakeProgress = Math.min(fakeProgress + 10, 90);
+      onProgress(fakeProgress);
+    }, 120);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        const body = await response.json().catch(() => null);
+        throw new Error(body?.error ?? 'Échec de l’envoi');
+      }
+
+      clearInterval(tick);
+      onProgress(100);
+    } catch (error) {
+      clearInterval(tick);
+      throw error;
+    }
   }
 }

@@ -3,28 +3,23 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('./features/home/home').then(m => m.Home),
-    title: 'Accueil — Dev Portal',
+    loadComponent: () => import('./features/home/home').then(m => m.Home)
   },
   {
     path: 'about',
-    loadComponent: () => import('./features/about/about').then(m => m.About),
-    title: 'À propos — Dev Portal',
+    loadComponent: () => import('./features/about/about').then(m => m.About)
   },
   {
     path: 'skills',
-    loadComponent: () => import('./features/skills/skills').then(m => m.Skills),
-    title: 'Compétences — Dev Portal',
+    loadComponent: () => import('./features/skills/skills').then(m => m.Skills)
   },
   {
     path: 'projects',
-    loadComponent: () => import('./features/projects/projects').then(m => m.Projects),
-    title: 'Projets — Dev Portal',
+    loadComponent: () => import('./features/projects/projects').then(m => m.Projects)
   },
   {
     path: 'contact',
-    loadComponent: () => import('./features/contact/contact').then(m => m.Contact),
-    title: 'Contact — Dev Portal',
+    loadComponent: () => import('./features/contact/contact').then(m => m.Contact)
   },
   { path: '**', redirectTo: '' },
 ];
