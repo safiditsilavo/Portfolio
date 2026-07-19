@@ -20,56 +20,7 @@ type LineType = 'command' | 'response' | 'system' | 'error' | 'info';
     .terminal-scroll::-webkit-scrollbar-track { background: rgba(0, 0, 0, 0.2); }
     .terminal-scroll::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 2px; }
   `],
-  template: `
-    <footer class="absolute bottom-0 left-0 right-0 bg-[#080808] border-t border-gray-900 transition-all duration-300 flex flex-col z-40"
-         [class]="isOpen() ? 'h-56' : 'h-11'">
-
-      <div class="flex items-center justify-between px-5 py-2.5 bg-[#0e0e0e] cursor-pointer hover:bg-[#121212] select-none"
-           (click)="toggle()">
-        <div class="flex items-center space-x-2 text-xs font-mono text-gray-400">
-          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" [class]="themeStore.themeColor().text">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          <span>BUILT-IN TERMINAL CONSOLE</span>
-        </div>
-        <div class="flex items-center space-x-2 text-xs text-gray-600">
-          <span class="hidden sm:inline font-mono">Type 'help' to begin</span>
-          <svg class="w-4 h-4 transition-transform duration-200" [class.rotate-180]="isOpen()"
-               fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-          </svg>
-        </div>
-      </div>
-
-      @if (isOpen()) {
-        <div class="flex-1 p-5 font-mono text-xs overflow-y-auto terminal-scroll space-y-2 bg-[#060606] text-gray-300">
-          @for (line of output(); track $index) {
-            <div class="leading-relaxed">
-              @if (line.type === 'command') { <span class="text-gray-500 mr-2">$</span> }
-              @if (line.type === 'system') { <span class="text-sky-400 mr-2">[SYSTEM]</span> }
-              <span class="whitespace-pre-wrap"
-                    [class]="line.type === 'response' ? themeStore.themeColor().text : (line.type === 'error' ? 'text-red-400' : 'text-gray-300')">
-                {{ line.content }}
-              </span>
-            </div>
-          }
-          <div class="flex items-center pt-1">
-            <span class="mr-2" [class]="themeStore.themeColor().text">➜</span>
-            <span class="text-cyan-400 mr-2">~</span>
-            <input #inputRef
-                   type="text"
-                   [value]="input()"
-                   (input)="input.set($any($event.target).value)"
-                   (keydown.enter)="handleCommand()"
-                   class="flex-1 bg-transparent border-none outline-none text-gray-100 focus:ring-0 p-0 font-mono text-xs"
-                   placeholder="Enter console command..."
-                   autofocus />
-          </div>
-          <div #bottomRef></div>
-        </div>
-      }
-    </footer>
-  `,
+  templateUrl: './terminal.html',
 })
 export class Terminal {
   themeStore = inject(ThemeStore);
