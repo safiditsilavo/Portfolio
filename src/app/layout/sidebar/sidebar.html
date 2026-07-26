@@ -30,6 +30,9 @@
     </nav>
 
     <div class="mt-auto p-6 border-t border-gray-900">
+        <div class="mb-4">
+            <app-language-switcher />
+        </div>
         <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
             <span class="font-mono">THEME ACCENT:</span>
             <span class="font-bold uppercase tracking-wider" [class]="themeStore.themeColor().text">{{ themeStore.theme() }}</span>

@@ -1,5 +1,6 @@
 <header class="md:hidden p-4 border-b border-gray-900 flex justify-between items-center bg-[#0a0a0a]">
   <span class="font-bold font-mono text-lg shrink-0" [class]="themeStore.themeColor().text">DEV_PORTAL</span>
+  <app-language-switcher />
   <div class="flex space-x-2 overflow-x-auto scrollbar-hide">
     @for (item of navItems; track item.path) {
       <a [routerLink]="item.path"
