@@ -6,7 +6,7 @@
             </svg>
             <span>DEV_PORTAL</span>
         </div>
-        <p class="text-[10px] text-gray-600 mt-2 font-mono tracking-wider">SYSTEM VERSION: v3.1.0-stable</p>
+        <p class="text-[10px] text-gray-600 mt-2 font-mono tracking-wider">{{ 'nav.title' | transloco }}: v1.0.0-stable</p>
     </div>
 
     <nav class="flex-1 py-6 space-y-1">
@@ -34,12 +34,12 @@
             <app-language-switcher />
         </div>
         <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
-            <span class="font-mono">THEME ACCENT:</span>
-            <span class="font-bold uppercase tracking-wider" [class]="themeStore.themeColor().text">{{ themeStore.theme() }}</span>
+            <span class="font-mono">{{ 'nav.theme' | transloco }}:</span>
+            <span class="font-bold uppercase tracking-wider" [class]="themeStore.themeColor().text">{{ ('theme.' + themeStore.theme()) | transloco }}</span>
         </div>
         <div class="flex items-center space-x-3 text-xs text-gray-400">
             <div class="w-2.5 h-2.5 rounded-full animate-pulse" [class]="themeStore.themeColor().accent"></div>
-            <span class="font-mono">Mainframe Active</span>
+            <span class="font-mono">{{ 'nav.status' | transloco }}</span>
         </div>
     </div>
 </aside>

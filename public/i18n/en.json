@@ -1,10 +1,19 @@
 {
   "nav": {
+    "title": "SYSTEM VERSION",
     "dashboard": "Dashboard",
     "about": "About Me",
     "skills": "Tech Stack",
     "projects": "Contributions",
-    "contact": "Contact"
+    "contact": "Contact",
+    "theme": "THEME ACCENT",
+    "status": "Mainframe Active"
+  },
+  "theme": {
+    "green": "GREEN",
+    "amber": "AMBER",
+    "blue": "BLUE",
+    "purple": "PURPLE"
   },
   "home": {
     "badge": "OPEN TO OPPORTUNITIES & COLLABORATIONS",

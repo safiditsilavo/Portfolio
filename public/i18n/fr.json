@@ -1,10 +1,19 @@
 {
   "nav": {
+    "title": "VERSION DU SYSTÈME",
     "dashboard": "Tableau de bord",
     "about": "À propos",
     "skills": "Technologies",
     "projects": "Contributions",
-    "contact": "Contact"
+    "contact": "Contact",
+    "theme": "ACCENT THÉMATIQUE",
+    "status": "Mainframe actif"
+  },
+  "theme": {
+    "green": "VERT",
+    "amber": "AMBRE",
+    "blue": "BLEU",
+    "purple": "VIOLET"
   },
   "home": {
     "badge": "OUVERT AUX OPPORTUNITÉS & COLLABORATIONS",
