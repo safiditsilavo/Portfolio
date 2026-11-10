@@ -35,6 +35,16 @@
       }
     }
   },
+  "skills": {
+    "title": "Arsenal technique",
+    "subtitle": "Technologies classifiées actuellement déployées dans des pipelines de production.",
+    "groups": {
+      "backend": "Systèmes backend",
+      "frontend": "Moteurs frontend",
+      "data": "Infrastructure de données",
+      "ops": "Opérations & livraison"
+    }
+  },
   "terminal": {
     "title": "CONSOLE TERMINALE INTÉGRÉE",
     "help": "Tapez 'help' pour commencer",

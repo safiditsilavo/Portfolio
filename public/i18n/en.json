@@ -35,6 +35,16 @@
       }
     }
   },
+  "skills": {
+    "title": "Technical Arsenal",
+    "subtitle": "Classified technologies currently deployed in production pipelines.",
+    "groups": {
+      "backend": "Core Backend Systems",
+      "frontend": "Frontend Engines",
+      "data": "Data Infrastructure",
+      "ops": "Operations & Delivery"
+    }
+  },
   "terminal": {
     "title": "BUILT-IN TERMINAL CONSOLE",
     "help": "Type 'help' to begin",
