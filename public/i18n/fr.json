@@ -17,13 +17,22 @@
   },
   "home": {
     "badge": "OUVERT AUX OPPORTUNITÉS & COLLABORATIONS",
-    "title1": "Architecte Backend",
+    "title1": "Développeur Backend",
     "title2": "Explorateur Frontend",
-    "intro": "Je construis des architectures serveur robustes tout en cultivant l'art du design sur le frontend moderne. Un pont entre la rigueur fonctionnelle et des interfaces expressives et intuitives.",
+    "intro": "Développeur backend .NET, PHP et Python, et concepteur de solutions de l’analyse à la réalisation. Je modélise, je conteneurise et j’automatise les déploiements. J'explore également le frontend moderne pour suivre son évolution.",
     "cards": {
-      "backend": { "title": "Moteurs Backend", "desc": "Expertise en NestJS, endpoints Python haute performance, et pipelines PHP résilients." },
-      "frontend": { "title": "UIs Modernes", "desc": "Conception itérative d'applications précises grâce aux Signals Angular et à l'écosystème React hooks." },
-      "data": { "title": "Infrastructure de données", "desc": "Optimisation de recherche via Elasticsearch, orchestration de schémas PostgreSQL, cache temps réel via Redis." }
+      "backend": {
+        "title": "Ingénierie Backend",
+        "desc": "Conception d'applications serveur robustes avec .NET, PHP et Python."
+      },
+      "design": {
+        "title": "Conception de solutions",
+        "desc": "De l'analyse des besoins à la réalisation : modélisation UML et Merise, architecture et choix techniques."
+      },
+      "delivery": {
+        "title": "Livraison & DevOps",
+        "desc": "Conteneurisation Docker, pipelines CI/CD et développement continu."
+      }
     }
   },
   "terminal": {
