@@ -25,5 +25,10 @@
       "frontend": { "title": "UIs Modernes", "desc": "Conception itérative d'applications précises grâce aux Signals Angular et à l'écosystème React hooks." },
       "data": { "title": "Infrastructure de données", "desc": "Optimisation de recherche via Elasticsearch, orchestration de schémas PostgreSQL, cache temps réel via Redis." }
     }
-  }
+  },
+  "terminal": {
+    "title": "CONSOLE TERMINALE INTÉGRÉE",
+    "help": "Tapez 'help' pour commencer",
+    "placeholder": "Entrez une commande..."
+  } 
 }

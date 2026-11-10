@@ -9,11 +9,13 @@ import {
 } from '@angular/core';
 import { Router } from '@angular/router';
 import { ThemeStore } from '../../core/theme/theme.store';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 type LineType = 'command' | 'response' | 'system' | 'error' | 'info';
 
 @Component({
   selector: 'app-terminal',
+  imports: [TranslocoPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   styles: [`
     .terminal-scroll::-webkit-scrollbar { width: 4px; }

@@ -25,5 +25,10 @@
       "frontend": { "title": "Modern UIs", "desc": "Iteratively shaping pixel-perfect applications leveraging Angular Signals and the React hooks ecosystem." },
       "data": { "title": "Data Infrastructure", "desc": "Search tuning via Elasticsearch, schema orchestration in PostgreSQL, and real-time caching via Redis." }
     }
+  },
+  "terminal": {
+    "title": "BUILT-IN TERMINAL CONSOLE",
+    "help": "Type 'help' to begin",
+    "placeholder": "Enter a command..."
   }
 }
