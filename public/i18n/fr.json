@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "title": "VERSION DU SYSTÈME",
+    "dashboard": "Tableau de bord",
+    "about": "À propos",
+    "skills": "Technologies",
+    "projects": "Contributions",
+    "contact": "Contact",
+    "theme": "ACCENT THÉMATIQUE",
+    "status": "Mainframe actif"
+  },
+  "theme": {
+    "green": "VERT",
+    "amber": "AMBRE",
+    "blue": "BLEU",
+    "purple": "VIOLET"
+  },
+  "home": {
+    "badge": "OUVERT AUX OPPORTUNITÉS & COLLABORATIONS",
+    "title1": "Développeur Backend",
+    "title2": "Explorateur Frontend",
+    "intro": "Développeur backend .NET, PHP et Python, et concepteur de solutions de l’analyse à la réalisation. Je modélise, je conteneurise et j’automatise les déploiements. J'explore également le frontend moderne pour suivre son évolution.",
+    "cards": {
+      "backend": {
+        "title": "Ingénierie Backend",
+        "desc": "Conception d'applications serveur robustes avec .NET, PHP et Python."
+      },
+      "design": {
+        "title": "Conception de solutions",
+        "desc": "De l'analyse des besoins à la réalisation : modélisation UML et Merise, architecture et choix techniques."
+      },
+      "delivery": {
+        "title": "Livraison & DevOps",
+        "desc": "Conteneurisation Docker, pipelines CI/CD et développement continu."
+      }
+    }
+  },
+  "skills": {
+    "title": "Arsenal technique",
+    "subtitle": "Technologies classifiées actuellement déployées dans des pipelines de production.",
+    "groups": {
+      "backend": "Systèmes backend",
+      "frontend": "Moteurs frontend",
+      "data": "Infrastructure de données",
+      "ops": "Opérations & livraison"
+    }
+  },
+  "terminal": {
+    "title": "CONSOLE TERMINALE INTÉGRÉE",
+    "help": "Tapez 'help' pour commencer",
+    "placeholder": "Entrez une commande..."
+  },
+  "about": {
+    "title": "Développeur Backend .NET / Python / PHP",
+    "bio": "Développeur backend et concepteur de solutions, de l'analyse à la réalisation. Je travaille avec .NET, PHP et Python, je modélise avec UML et Merise et je livre avec Docker et des pipelines CI/CD. En parallèle, j'explore le frontend moderne pour suivre son évolution.",
+    "experience": {
+      "heading": "Journal de carrière",
+      "comete": {
+        "role": "Développeur Concepteur",
+        "period": "Janv. 2025 – Aujourd'hui",
+        "b1": "Conception d'un système d'aide en temps réel des agents pour optimiser leurs conversations avec les clients.",
+        "b2": "Plateforme comportant deux applications : desktop (.NET avec Avalonia : capture audio, sorties haut-parleurs et micro) et WebApp (ASP.NET API Web + React : centre de tout le système et visuel côté agent).",
+        "b3": "Conception d'un système de monitoring d'exécution d'API.",
+        "b4": "Gestion des données, alimentation, mise à jour automatique et amélioration des processus de gestion de données."
+      },
+      "etech": {
+        "role": "Ingénieur Développeur",
+        "period": "Août 2021 – Janv. 2025",
+        "b1": "Collaboration avec des équipes inter-fonctionnelles pour concevoir et mettre en œuvre de nouvelles fonctionnalités.",
+        "b2": "Développement et maintenance d'applications web.",
+        "b3": "Optimisation de requêtes d'import de données.",
+        "b4": "Participation aux revues de code et contribution à l'amélioration de la qualité du code par l'adoption des bonnes pratiques.",
+        "b5": "Analyse et estimation (chiffrage) des fonctionnalités."
+      }
+    },
+    "education": {
+      "heading": "Parcours académique",
+      "master": {
+        "degree": "Master 2 en Informatique de Gestion, Génie Logiciel et Intelligence Artificielle",
+        "period": "2019 – 2021"
+      },
+      "licence": {
+        "degree": "Licence en Informatique de Gestion, Génie Logiciel et Intelligence Artificielle",
+        "period": "2015 – 2019"
+      }
+    }
+  },
+  "contact": {
+    "title": "Initialiser la connexion",
+    "subtitle": "Établir une connexion sécurisée directement vers ma boîte de réception.",
+    "form": {
+      "name": "nom",
+      "email": "email",
+      "message": "message",
+      "namePlaceholder": "Jean Dupont",
+      "emailPlaceholder": "jean@exemple.com",
+      "messagePlaceholder": "Écris ta transmission...",
+      "sending": "TRANSMISSION DU PAQUET...",
+      "success": "TRANSMISSION RÉUSSIE ! PAQUET REÇU.",
+      "error": "La transmission a échoué. Réessaie dans un instant.",
+      "submit": "ENVOYER_LE_PAQUET()"
+    },
+    "elsewhere": "Ou retrouve-moi sur"
+  }
+}

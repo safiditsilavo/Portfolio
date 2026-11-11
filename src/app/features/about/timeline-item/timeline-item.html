@@ -1,0 +1,19 @@
+<div class="relative">
+  <span class="absolute -left-[41px] top-0 bg-[#050505] p-1.5 border rounded-full" [class]="iconClasses()">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="entry().icon" />
+    </svg>
+  </span>
+
+  <h4 class="text-white font-bold text-lg font-mono">{{ entry().titleKey | transloco }}</h4>
+  <p class="text-sm text-gray-300 font-mono">{{ entry().organization }} · {{ entry().location }}</p>
+  <p class="text-sm font-mono mb-2" [class]="periodClass()">{{ entry().periodKey | transloco }}</p>
+
+  @if (entry().bulletKeys.length) {
+    <ul class="list-disc pl-4 space-y-1.5 marker:text-gray-600 text-gray-400 text-sm leading-relaxed">
+      @for (key of entry().bulletKeys; track key) {
+        <li>{{ key | transloco }}</li>
+      }
+    </ul>
+  }
+</div>

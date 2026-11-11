@@ -17,15 +17,21 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    await resend.emails.send({
+    const { data, error } = await resend.emails.send({
       from: 'Portfolio <onboarding@resend.dev>',
-      to: 'safiditsilavo.andrianjakanivo@gmail.com',
+      to: 'astsafidi@gmail.com',
       replyTo: email,
       subject: `Nouveau message de ${name} via le portfolio`,
       text: message,
     });
 
-    res.status(200).json({ success: true });
+    if (error) {
+      console.error('Erreur Resend:', error);
+      res.status(500).json({ error: error.message });
+      return;
+    }
+
+    res.status(200).json({ success: true, id: data?.id });
   } catch (error) {
     console.error('Erreur envoi email:', error);
     res.status(500).json({ error: 'Envoi impossible' });

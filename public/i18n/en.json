@@ -1,0 +1,105 @@
+{
+  "nav": {
+    "title": "SYSTEM VERSION",
+    "dashboard": "Dashboard",
+    "about": "About Me",
+    "skills": "Tech Stack",
+    "projects": "Contributions",
+    "contact": "Contact",
+    "theme": "THEME ACCENT",
+    "status": "Mainframe Active"
+  },
+  "theme": {
+    "green": "GREEN",
+    "amber": "AMBER",
+    "blue": "BLUE",
+    "purple": "PURPLE"
+  },
+  "home": {
+    "badge": "OPEN TO OPPORTUNITIES & COLLABORATIONS",
+    "title1": "Backend Developer",
+    "title2": "Frontend Explorer",
+    "intro": "Backend developer specializing in .NET, PHP, and Python, and a solutions architect from analysis through implementation. I model, containerize, and automate deployments. I also explore modern frontend technologies to stay up to date with the latest developments.",
+    "cards": {
+      "backend": {
+        "title": "Backend Engineering",
+        "desc": "Building robust server-side applications with .NET, PHP and Python."
+      },
+      "design": {
+        "title": "Solution Design",
+        "desc": "From requirements analysis to implementation: UML and Merise modeling, architecture and technical decisions."
+      },
+      "delivery": {
+        "title": "Delivery & DevOps",
+        "desc": "Docker containerization, CI/CD pipelines and continuous development."
+      }
+    }
+  },
+  "skills": {
+    "title": "Technical Arsenal",
+    "subtitle": "Classified technologies currently deployed in production pipelines.",
+    "groups": {
+      "backend": "Core Backend Systems",
+      "frontend": "Frontend Engines",
+      "data": "Data Infrastructure",
+      "ops": "Operations & Delivery"
+    }
+  },
+  "terminal": {
+    "title": "BUILT-IN TERMINAL CONSOLE",
+    "help": "Type 'help' to begin",
+    "placeholder": "Enter a command..."
+  },
+  "about": {
+    "title": "Backend Developer .NET / Python / PHP",
+    "bio": "Backend developer and solution designer, from analysis to delivery. I work with .NET, PHP and Python, model with UML and Merise, and ship with Docker and CI/CD pipelines. On the side, I'm exploring the modern frontend to keep pace with its evolution.",
+    "experience": {
+      "heading": "Career Lifecycle Logs",
+      "comete": {
+        "role": "Software Designer & Developer",
+        "period": "Jan 2025 – Present",
+        "b1": "Designed a real-time assistance system helping agents optimize their conversations with customers.",
+        "b2": "Built a platform made of two applications: a desktop app (.NET with Avalonia, capturing audio from speakers and microphone) and a web app (ASP.NET Web API + React) that is the core of the system and the agent-facing interface.",
+        "b3": "Designed an API execution monitoring system.",
+        "b4": "Handled data management: ingestion, automatic updates and improvement of data management processes."
+      },
+      "etech": {
+        "role": "Software Engineer",
+        "period": "Aug 2021 – Jan 2025",
+        "b1": "Worked with cross-functional teams to design and implement new features.",
+        "b2": "Developed and maintained web applications.",
+        "b3": "Optimized data import queries.",
+        "b4": "Took part in code reviews and helped improve code quality by adopting best practices.",
+        "b5": "Analyzed and estimated features."
+      }
+    },
+    "education": {
+      "heading": "Academic Logs",
+      "master": {
+        "degree": "Master's Degree in Business Computing, Software Engineering and Artificial Intelligence",
+        "period": "2019 – 2021"
+      },
+      "licence": {
+        "degree": "Bachelor's Degree in Business Computing, Software Engineering and Artificial Intelligence",
+        "period": "2015 – 2019"
+      }
+    }
+  },
+  "contact": {
+    "title": "Initialize System Handshake",
+    "subtitle": "Establish a secure socket connection directly to my inbox.",
+    "form": {
+      "name": "name",
+      "email": "email",
+      "message": "message",
+      "namePlaceholder": "Jane Doe",
+      "emailPlaceholder": "jane@example.com",
+      "messagePlaceholder": "Write your transmission...",
+      "sending": "TRANSMITTING PACKET...",
+      "success": "TRANSMISSION SUCCESSFUL! PACKET RECEIVED.",
+      "error": "Transmission failed. Please try again in a moment.",
+      "submit": "SEND_PACKET_TRANSMISSION()"
+    },
+    "elsewhere": "Or find me on"
+  }
+}
