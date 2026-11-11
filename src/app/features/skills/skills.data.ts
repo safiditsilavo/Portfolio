@@ -10,12 +10,12 @@ export const SKILL_GROUPS: SkillGroup[] = [
   {
     labelKey: 'skills.groups.backend',
     accent: 'emerald',
-    items: ['C#/.NET', 'Python', 'PHP', 'REST APIs'],
+    items: ['C#/.NET', 'Python', 'PHP', 'SQL', 'REST APIs', 'gRPC'],
   },
   {
     labelKey: 'skills.groups.frontend',
     accent: 'cyan',
-    items: ['Angular', 'TypeScript', 'Bootstrap', 'HTML5/CSS3'],
+    items: ['Angular', 'JavaScript', 'TypeScript', 'Bootstrap', 'HTML5/CSS3'],
   },
   {
     labelKey: 'skills.groups.data',
@@ -25,6 +25,6 @@ export const SKILL_GROUPS: SkillGroup[] = [
   {
     labelKey: 'skills.groups.ops',
     accent: 'amber',
-    items: ['Docker Containers', 'Git / GitHub Actions', 'CI/CD', 'Linux'],
+    items: ['Docker Containers', 'Git / GitHub Actions', 'CI/CD', 'Linux', 'Jira'],
   },
 ];
