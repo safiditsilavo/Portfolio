@@ -51,7 +51,7 @@
     "placeholder": "Enter a command..."
   },
   "about": {
-    "title": "System Operator / Biography",
+    "title": "Backend Developer .NET / Python / PHP",
     "bio": "Backend developer and solution designer, from analysis to delivery. I work with .NET, PHP and Python, model with UML and Merise, and ship with Docker and CI/CD pipelines. On the side, I'm exploring the modern frontend to keep pace with its evolution.",
     "experience": {
       "heading": "Career Lifecycle Logs",
@@ -82,10 +82,6 @@
       "licence": {
         "degree": "Bachelor's Degree in Business Computing, Software Engineering and Artificial Intelligence",
         "period": "2015 – 2019"
-      },
-      "bac": {
-        "degree": "Baccalaureate, Series C (Mathematics & Sciences)",
-        "period": "2013 – 2014"
       }
     }
   }

@@ -8,7 +8,7 @@
     <h3 class="text-xl font-mono flex items-center" [class]="themeStore.themeColor().text">
       <span class="mr-2">#</span> {{ 'about.experience.heading' | transloco }}
     </h3>
-    <div class="relative border-l border-gray-900 ml-3 space-y-8 pl-8 pb-4">
+    <div class="relative border-l border-gray-900 ml-3 flex flex-col gap-10 pl-8 pb-4">
       @for (entry of experiences; track entry.titleKey) {
         <app-timeline-item [entry]="entry" />
       }
