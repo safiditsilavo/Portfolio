@@ -84,5 +84,22 @@
         "period": "2015 – 2019"
       }
     }
+  },
+  "contact": {
+    "title": "Initialize System Handshake",
+    "subtitle": "Establish a secure socket connection directly to my inbox.",
+    "form": {
+      "name": "name",
+      "email": "email",
+      "message": "message",
+      "namePlaceholder": "Jane Doe",
+      "emailPlaceholder": "jane@example.com",
+      "messagePlaceholder": "Write your transmission...",
+      "sending": "TRANSMITTING PACKET...",
+      "success": "TRANSMISSION SUCCESSFUL! PACKET RECEIVED.",
+      "error": "Transmission failed. Please try again in a moment.",
+      "submit": "SEND_PACKET_TRANSMISSION()"
+    },
+    "elsewhere": "Or find me on"
   }
 }

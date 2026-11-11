@@ -1,15 +1,20 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { TranslocoPipe } from '@jsverse/transloco';
 import { ThemeStore } from '../../core/theme/theme.store';
+import { SOCIAL_LINKS } from '../../core/social-links';
 import { ContactService } from './contact.service';
 
 @Component({
   selector: 'app-contact',
+  imports: [TranslocoPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './contact.html',
 })
 export class Contact {
   themeStore = inject(ThemeStore);
   private contactService = inject(ContactService);
+
+  protected readonly socialLinks = SOCIAL_LINKS;
 
   formName = signal('');
   formEmail = signal('');

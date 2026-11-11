@@ -84,5 +84,22 @@
         "period": "2015 – 2019"
       }
     }
+  },
+  "contact": {
+    "title": "Initialiser la connexion",
+    "subtitle": "Établir une connexion sécurisée directement vers ma boîte de réception.",
+    "form": {
+      "name": "nom",
+      "email": "email",
+      "message": "message",
+      "namePlaceholder": "Jean Dupont",
+      "emailPlaceholder": "jean@exemple.com",
+      "messagePlaceholder": "Écris ta transmission...",
+      "sending": "TRANSMISSION DU PAQUET...",
+      "success": "TRANSMISSION RÉUSSIE ! PAQUET REÇU.",
+      "error": "La transmission a échoué. Réessaie dans un instant.",
+      "submit": "ENVOYER_LE_PAQUET()"
+    },
+    "elsewhere": "Ou retrouve-moi sur"
   }
 }
