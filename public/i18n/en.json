@@ -48,7 +48,23 @@
   "terminal": {
     "title": "BUILT-IN TERMINAL CONSOLE",
     "help": "Type 'help' to begin",
-    "placeholder": "Enter a command..."
+    "placeholder": "Enter a command...",
+    "systemTag": "[SYSTEM]",
+    "boot": {
+      "init": "SYSTEM INITIALIZED. Welcome to Dev_OS v3.1.0",
+      "hint": "Try typing commands like \"neofetch\", \"theme amber\", \"cat bio\", or \"clear\"."
+    },
+    "responses": {
+      "help": "AVAILABLE SYSTEM DIRECTIVES:\n  neofetch             Show platform specs\n  theme <color>        Change accent color (green, amber, blue, purple)\n  cat bio              Read my professional profile\n  home, about, skills,\n  projects, contact    Navigate directly to a page\n  clear                Clear the console\n  date                 Display the current UTC time",
+      "neofetch": "KERNEL: Angular 22.x Architecture Virtual Node\nACCENT COLOR: {{ theme }} Accent Core",
+      "themeChanged": "SUCCESS: Mainframe accent swapped to [{{ theme }}]",
+      "themeInvalid": "ERROR: Invalid theme color \"{{ arg }}\". Try \"theme green\", \"theme amber\", \"theme blue\", or \"theme purple\".",
+      "bio": "BIOGRAPHY FILE: bio.md\n--------------------------\n\"Backend developer and solution designer, from analysis to delivery.\"\nI build reliable systems with .NET, PHP and Python, ship them with Docker and CI/CD, and explore the modern frontend on the side.",
+      "fileNotFound": "ERROR: File \"{{ arg }}\" not found. Try \"cat bio\"",
+      "routed": "SUCCESS: Routed to \"{{ page }}\"",
+      "date": "UTC CURRENT TIMESTAMP: {{ date }}",
+      "unknown": "UNRECOGNIZED TERMINAL DIRECTIVE: \"{{ cmd }}\". Type \"help\" to list valid instructions."
+    }
   },
   "about": {
     "title": "Backend Developer .NET / Python / PHP",

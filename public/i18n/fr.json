@@ -48,7 +48,23 @@
   "terminal": {
     "title": "CONSOLE TERMINALE INTÉGRÉE",
     "help": "Tapez 'help' pour commencer",
-    "placeholder": "Entrez une commande..."
+    "placeholder": "Entrez une commande...",
+    "systemTag": "[SYSTÈME]",
+    "boot": {
+      "init": "SYSTÈME INITIALISÉ. Bienvenue sur Dev_OS v3.1.0",
+      "hint": "Essaie des commandes comme \"neofetch\", \"theme amber\", \"cat bio\" ou \"clear\"."
+    },
+    "responses": {
+      "help": "DIRECTIVES SYSTÈME DISPONIBLES :\n  neofetch             Afficher les specs de la plateforme\n  theme <color>        Changer la couleur d'accent (green, amber, blue, purple)\n  cat bio              Lire mon profil professionnel\n  home, about, skills,\n  projects, contact    Naviguer directement vers une page\n  clear                Vider la console\n  date                 Afficher l'heure UTC actuelle",
+      "neofetch": "NOYAU : Angular 22.x Architecture Virtual Node\nCOULEUR D'ACCENT : {{ theme }} Accent Core",
+      "themeChanged": "SUCCÈS : accent du mainframe changé en [{{ theme }}]",
+      "themeInvalid": "ERREUR : couleur de thème \"{{ arg }}\" invalide. Essaie \"theme green\", \"theme amber\", \"theme blue\" ou \"theme purple\".",
+      "bio": "FICHIER BIOGRAPHIE : bio.md\n--------------------------\n\"Développeur backend et concepteur de solutions, de l'analyse à la réalisation.\"\nJe construis des systèmes fiables avec .NET, PHP et Python, je les livre avec Docker et CI/CD, et j'explore le frontend moderne en parallèle.",
+      "fileNotFound": "ERREUR : fichier \"{{ arg }}\" introuvable. Essaie \"cat bio\"",
+      "routed": "SUCCÈS : redirection vers \"{{ page }}\"",
+      "date": "HORODATAGE UTC ACTUEL : {{ date }}",
+      "unknown": "DIRECTIVE INCONNUE : \"{{ cmd }}\". Tape \"help\" pour lister les instructions valides."
+    }
   },
   "about": {
     "title": "Développeur Backend .NET / Python / PHP",

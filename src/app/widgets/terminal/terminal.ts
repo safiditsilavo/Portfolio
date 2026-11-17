@@ -13,6 +13,13 @@ import { TranslocoPipe } from '@jsverse/transloco';
 
 type LineType = 'command' | 'response' | 'system' | 'error' | 'info';
 
+interface TerminalLine {
+  type: LineType;
+  key?: string;
+  params?: Record<string, string>;
+  raw?: string;
+}
+
 @Component({
   selector: 'app-terminal',
   imports: [TranslocoPipe],
@@ -30,9 +37,9 @@ export class Terminal {
 
   isOpen = signal(true);
   input = signal('');
-  output = signal<Array<{ type: LineType; content: string }>>([
-    { type: 'system', content: 'SYSTEM INITIALIZED. Welcome to Dev_OS v3.1.0' },
-    { type: 'info', content: 'Try typing commands like "neofetch", "theme amber", "cat bio", or "clear".' },
+  output = signal<TerminalLine[]>([
+    { type: 'system', key: 'terminal.boot.init' },
+    { type: 'info', key: 'terminal.boot.hint' },
   ]);
 
   @ViewChild('bottomRef') private bottom!: ElementRef;
@@ -61,34 +68,39 @@ export class Terminal {
     if (!rawInput) return;
 
     const [cmd, arg = ''] = rawInput.split(' ').map(t => t.toLowerCase());
-    let response = '';
+    let key = '';
+    let params: Record<string, string> = {};
     let isError = false;
 
     switch (cmd) {
       case 'help':
-        response = `AVAILABLE SYSTEM DIRECTIVES:
-  neofetch             Show retro platform specs
-  theme <color>        Change terminal theme color (green, amber, blue, purple)
-  cat bio              Read my professional developer profile
-  home, about,         Navigate directly to matching pages
-  skills, projects,
-  contact
-  clear                Purge the console memory screen
-  date                 Display standard host server current time`;
+        key = 'terminal.responses.help';
         break;
 
       case 'neofetch':
-        response = `KERNEL: Angular 22.x Architecture Virtual Node
-ACCENT COLOR: ${this.themeStore.theme().toUpperCase()} Accent Core`;
+        key = 'terminal.responses.neofetch';
+        params = { theme: this.themeStore.theme().toUpperCase() };
         break;
 
       case 'theme':
         if (this.themeStore.isValidTheme(arg)) {
           this.themeStore.setTheme(arg);
-          response = `SUCCESS: Mainframe accent swapped successfully to [${arg.toUpperCase()}]`;
+          key = 'terminal.responses.themeChanged';
+          params = { theme: arg.toUpperCase() };
         } else {
           isError = true;
-          response = `ERROR: Invalid theme color "${arg}". Try "theme green", "theme amber", "theme blue", or "theme purple".`;
+          key = 'terminal.responses.themeInvalid';
+          params = { arg };
+        }
+        break;
+
+      case 'cat':
+        if (arg === 'bio' || arg === 'biography') {
+          key = 'terminal.responses.bio';
+        } else {
+          isError = true;
+          key = 'terminal.responses.fileNotFound';
+          params = { arg };
         }
         break;
 
@@ -98,11 +110,13 @@ ACCENT COLOR: ${this.themeStore.theme().toUpperCase()} Accent Core`;
       case 'projects':
       case 'contact':
         this.router.navigate([cmd === 'home' ? '/' : `/${cmd}`]);
-        response = `SUCCESS: Routed to "${cmd.toUpperCase()}"`;
+        key = 'terminal.responses.routed';
+        params = { page: cmd.toUpperCase() };
         break;
 
       case 'date':
-        response = `UTC CURRENT TIMESTAMP: ${new Date().toUTCString()}`;
+        key = 'terminal.responses.date';
+        params = { date: new Date().toUTCString() };
         break;
 
       case 'clear':
@@ -112,13 +126,14 @@ ACCENT COLOR: ${this.themeStore.theme().toUpperCase()} Accent Core`;
 
       default:
         isError = true;
-        response = `UNRECOGNIZED TERMINAL DIRECTIVE: "${cmd}". Type "help" to list valid instructions.`;
+        key = 'terminal.responses.unknown';
+        params = { cmd };
     }
 
     this.output.update(o => [
       ...o,
-      { type: 'command', content: rawInput },
-      { type: isError ? 'error' : 'response', content: response },
+      { type: 'command', raw: rawInput },
+      { type: isError ? 'error' : 'response', key, params },
     ]);
     this.input.set('');
   }
