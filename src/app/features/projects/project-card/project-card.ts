@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component, computed, input } from '@angular/core';
+import { TranslocoPipe } from '@jsverse/transloco';
 import { Project, ProjectAccent } from '../projects.data';
 
 const ACCENT_CLASSES: Record<ProjectAccent, { iconBg: string; iconText: string; hoverBorder: string; shadow: string }> = {
@@ -30,8 +31,9 @@ const ACCENT_CLASSES: Record<ProjectAccent, { iconBg: string; iconText: string; 
 
 @Component({
   selector: 'app-project-card',
+  imports: [TranslocoPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
-    templateUrl: './project-card.html',
+  templateUrl: './project-card.html',
 })
 export class ProjectCard {
   project = input.required<Project>();

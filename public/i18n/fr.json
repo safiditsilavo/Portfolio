@@ -117,5 +117,35 @@
       "submit": "ENVOYER_LE_PAQUET()"
     },
     "elsewhere": "Ou retrouve-moi sur"
+  },
+  "projects": {
+    "title": "Contributions clés",
+    "subtitle": "Impacts directs sur l'architecture des systèmes et aperçus de projets.",
+    "notice": {
+      "title": "Avis de confidentialité",
+      "text": "La plupart des développements sont des systèmes d'entreprise protégés par des licences propriétaires. Vous trouverez ci-dessous des synthèses techniques abstraites décrivant les stratégies d'architecture de chaque projet."
+    },
+    "card": {
+      "private": "Dépôt privé",
+      "playground": "Projet d'expérimentation"
+    },
+    "items": {
+      "assistant": {
+        "title": "Application d'aide et d'assistance pour les conseillers clients",
+        "desc": "Développée pour assister, guider et optimiser les processus suivis par les conseillers clients dans leurs interactions avec les clients."
+      },
+      "monitoring": {
+        "title": "Monitoring d'API",
+        "desc": "Outil de surveillance et d'analyse des performances des API, permettant de détecter les anomalies ou les erreurs pour réagir et débugger rapidement."
+      },
+      "cicd": {
+        "title": "CI/CD : déploiement automatisé",
+        "desc": "Conception de pipelines de tests à exécution parallèle. Accélération du cycle de retour d'information, permettant des mises en production sécurisées déclenchées directement lors des push sur GitHub."
+      },
+      "data": {
+        "title": "Gestion de données, alimentation automatique et reporting",
+        "desc": "Gestion des données, alimentation, mise à jour automatique et amélioration des processus de gestion de données."
+      }
+    }
   }
 }

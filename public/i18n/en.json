@@ -117,5 +117,35 @@
       "submit": "SEND_PACKET_TRANSMISSION()"
     },
     "elsewhere": "Or find me on"
+  },
+  "projects": {
+    "title": "Key Contributions",
+    "subtitle": "Direct system architecture impacts and project snapshots.",
+    "notice": {
+      "title": "Proprietary Notice",
+      "text": "Most developments are enterprise-class systems protected under closed-source licenses. Below are abstract technical breakdowns outlining the architectural strategies of each project."
+    },
+    "card": {
+      "private": "Private Repository",
+      "playground": "Playground"
+    },
+    "items": {
+      "assistant": {
+        "title": "Assistance Application for Customer Agents",
+        "desc": "Built to assist, guide and optimize the processes followed by customer agents in their interactions with customers."
+      },
+      "monitoring": {
+        "title": "API Monitoring",
+        "desc": "A tool to monitor and analyze API performance, detecting anomalies and errors so the team can react and debug quickly."
+      },
+      "cicd": {
+        "title": "CI/CD Automated Deployment",
+        "desc": "Design of parallel test pipelines. A shorter feedback cycle, enabling secure production releases triggered directly by GitHub pushes."
+      },
+      "data": {
+        "title": "Data Management, Automated Data Feeding and Reporting",
+        "desc": "Data management, ingestion, automatic updates and improvement of data management processes."
+      }
+    }
   }
 }
