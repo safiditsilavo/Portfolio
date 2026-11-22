@@ -23,10 +23,16 @@
       @for (line of output(); track $index) {
         <div class="leading-relaxed">
           @if (line.type === 'command') { <span class="text-gray-500 mr-2">$</span> }
-          @if (line.type === 'system') { <span class="text-sky-400 mr-2">[SYSTEM]</span> }
+          @if (line.type === 'system') {
+            <span class="text-sky-400 mr-2">{{ 'terminal.systemTag' | transloco }}</span>
+          }
           <span class="whitespace-pre-wrap"
                 [class]="line.type === 'response' ? themeStore.themeColor().text : (line.type === 'error' ? 'text-red-400' : 'text-gray-300')">
-            {{ line.content }}
+            @if (line.key) {
+              {{ line.key | transloco: line.params }}
+            } @else {
+              {{ line.raw }}
+            }
           </span>
         </div>
       }
